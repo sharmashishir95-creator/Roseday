@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Happy Rose Day 🌹</title>
+  <style>
+    :root{
+      --bg1:#ffe6ef;
+      --bg2:#ff9db4;
+      --card:#ffffffd9;
+      --text:#2b2b2b;
+      --muted:#6c757d;
+      --shadow: 0 18px 55px rgba(0,0,0,.14);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:20px;
+      background:
+        radial-gradient(1200px 800px at 20% 20%, var(--bg1), transparent 60%),
+        radial-gradient(1200px 800px at 80% 80%, var(--bg2), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:var(--text);
+    }
+
+    .card{
+      width:min(780px, 96vw);
+      background: var(--card);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .top{
+      padding:18px 18px 6px;
+      text-align:center;
+    }
+
+    .badge{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:9px 13px;
+      border-radius:999px;
+      background: rgba(255,255,255,.75);
+      font-weight:800;
+      font-size:14px;
+    }
+
+    h1{
+      margin:14px 0 6px;
+      font-size: clamp(26px, 4.2vw, 42px);
+      line-height:1.1;
+    }
+
+    p{
+      margin:10px 0 16px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .imgWrap{
+      position:relative;
+      background:#fff;
+    }
+
+    img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .msg{
+      padding:18px;
+      text-align:center;
+    }
+
+    .note{
+      margin:0 auto;
+      width:min(560px, 92%);
+      background: rgba(255,255,255,.85);
+      border-radius:18px;
+      padding:16px 14px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.10);
+      border:1px solid rgba(0,0,0,.06);
+    }
+
+    .note .to{
+      font-size:18px;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .note .body{
+      font-size:16px;
+      line-height:1.55;
+      margin:0;
+      font-weight:700;
+      color:#2b2b2b;
+    }
+
+    .sig{
+      margin-top:10px;
+      font-weight:900;
+      font-size:16px;
+      opacity:.9;
+    }
+
+    .tiny{
+      padding:0 18px 18px;
+      text-align:center;
+      font-size:12px;
+      opacity:.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="top">
+      <div class="badge">🌹 Rose Day Surprise</div>
+      <h1>Happy Rose Day, Maya ❤️</h1>
+      <p>Just a little rose… and a lot of love.</p>
+    </div>
+
+    <div class="imgWrap">
+      <!-- IMPORTANT:
+           Put the image file in the SAME folder as this index.html and name it: rose.png
+           (Or change the src below to your image filename)
+      -->
+      <img src="rose.png" alt="Rose Day Love">
+    </div>
+
+    <div class="msg">
+      <div class="note">
+        <div class="to">For you, Maya 💖</div>
+        <p class="body">
+          You are as beautiful as this rose. 🌹<br/>
+          I'm greatful for you every single day.
+        </p>
+        <div class="sig">With all my love, <span id="fromName">Your Name</span></div>
+      </div>
+    </div>
+
+    <div class="tiny"> Only for Meri Maya ❤️</div>
+  </main>
+
+  <script>
+    // Change your name here:
+    document.getElementById("fromName").textContent = "Shishir❤️, "; // <-- edit this
+  </script>
+</body>
+</html>
